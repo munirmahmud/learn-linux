@@ -100,7 +100,7 @@ Total search result থেকে নির্দিষ্ট সংখক রে
 
 `f stands for file (regular file)`
 
-`l stands for link file`
+`l stands for soft link file`
 
 `p stands for pipe line file`
 
