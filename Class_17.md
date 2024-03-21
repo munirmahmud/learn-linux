@@ -17,10 +17,15 @@ Command: `ln -s main_file linked_file` softlink তৈরির ক্ষেত�
 Command: `ln main_file linked_file` Hardlink তৈরি করার command
 
 `touch symlink.txt`
+
 `ln -s symlink.txt symlink-soft.txt`
+
 `ll`
+
 `echo "Hello symlink" >> symlink.txt`
+
 `cat symlink.txt` এবং
+
 `cat symlink২.txt` করে আমরা দেখতে পাবো যে উভয় ফাইলে একই content আছে।
 
 এখন `rm -f symlink.txt` command রান করলে দেখবো, আমাদের symlink-soft.txt ফাইলটি আর কাজ করছে না।
@@ -28,10 +33,15 @@ Command: `ln main_file linked_file` Hardlink তৈরি করার command
 এখন আমরা hardlink তৈরি করা দেখবো।
 
 `touch hardlink.txt`
+
 `ln hardlink.txt hardlink2.txt`
+
 `ll`
+
 `echo "Hello hardlink" >> hardlink.txt`
+
 `cat hardlink.txt` এবং
+
 `cat hardlink২.txt` করে আমরা দেখতে পাবো যে উভয় ফাইলে একই content আছে।
 
 এখন `rm -f hardlink.txt` command রান করলে দেখবো, আমাদের hardlink2.txt ফাইলটি রান করতে কোন সমস্যা হচ্ছে না।
