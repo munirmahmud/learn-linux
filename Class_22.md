@@ -81,33 +81,29 @@ Unit type এর মধ্যে একটা unit হল target এই target u
 
 Target unit এর মধ্যে একাধিক unit কাজ করতে পারে। যেমনঃ runlevel3 একটা Target unit এর মধ্যে `service, mount socket, automount, device, swap` ইত্যাদি কাজ করে।
 
-|          Status           |                                                       Description                                                       |
-| :-----------------------: | :---------------------------------------------------------------------------------------------------------------------: |
-|          loaded           |                         The unit's configuration file has been successfully read and processed.                         |
-|          :----:           |                         :---------------------------------------------------------------------:                         |
-|      Active (exited)      |   Successfully executed the one-time configuration and after execution, the unit is neither running an active process   |
+| Status                    | Description                                                                                                             |
+| :------------------------ | :---------------------------------------------------------------------------------------------------------------------- |
+| loaded                    | The unit's configuration file has been successfully read and processed.                                                 |
+| Active (exited)           | Successfully executed the one-time configuration and after execution, the unit is neither running an active process     |
 | nor waiting for an event. |
-|          :----:           |                         :---------------------------------------------------------------------:                         |
-|     Active (running)      | Successfully executed the one-time configuration and after execution, the unit is running one or more active processes. |
-|          :----:           |                         :---------------------------------------------------------------------:                         |
-|     Active (waliting)     |         Successfully executed the one-time configuration and after execution, the unit is waiting for an event.         |
-|          :----:           |                         :---------------------------------------------------------------------:                         |
-|      Inactive (dead)      |                        Either the one-time configuration failed to execute or not executed yet.                         |
+| Active (running)          | Successfully executed the one-time configuration and after execution, the unit is running one or more active processes. |
+| Active (waliting)         | Successfully executed the one-time configuration and after execution, the unit is waiting for an event.                 |
+| Inactive (dead)           | Either the one-time configuration failed to execute or not executed yet.                                                |
 
-| Unit Type |                                                                   Description                                                                    |
-| :-------: | :----------------------------------------------------------------------------------------------------------------------------------------------: |
-|  Target   | A group of units that defines a synchronization point. The synchronization point is used at boot time to start the system in a particular state. |
-|  Service  |                        A unit of this type starts, stops, restarts or reloads a service daemon such as Apache webserver.                         |
-|  Socket   |                     A unit of this type activates a service when the service receives incoming trafic on a listening socket.                     |
-|  Device   |                                 A unit of this type implements device-based activation such as a device driver.                                  |
-|   Mount   |                                            A unit of this type controls the file-system mount point.                                             |
-| Automount |                                   A unit of this type provides and controls on-demand mounting of file systems                                   |
-|   Swap    |                                      A unit of this type encapsulates/activates/deactivates swap partition.                                      |
-|   Path    |        A unit of this type monitors files/directories and activates/deactivates a service if the specified file or directory is accessed.        |
-|   Timer   |                  A unit of this type activates/deactivates specified service based on a timer or when the set time is elapsed.                   |
-| Snapshot  |            A unit that creates and saves the current state of all running units. This state can be used to restore the system later.             |
-|   Slice   |                                     A group of units that manages system resources such as CPU, and memory.                                      |
-|   Scope   |                                               A unit that organizes and manages foreign processes                                                |
-|  busname  |                                                         A unit that controls DBus system                                                         |
+| Unit Type | Description                                                                                                                                      |
+| :-------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Target    | A group of units that defines a synchronization point. The synchronization point is used at boot time to start the system in a particular state. |
+| Service   | A unit of this type starts, stops, restarts or reloads a service daemon such as Apache webserver.                                                |
+| Socket    | A unit of this type activates a service when the service receives incoming trafic on a listening socket.                                         |
+| Device    | A unit of this type implements device-based activation such as a device driver.                                                                  |
+| Mount     | A unit of this type controls the file-system mount point.                                                                                        |
+| Automount | A unit of this type provides and controls on-demand mounting of file systems                                                                     |
+| Swap      | A unit of this type encapsulates/activates/deactivates swap partition.                                                                           |
+| Path      | A unit of this type monitors files/directories and activates/deactivates a service if the specified file or directory is accessed.               |
+| Timer     | A unit of this type activates/deactivates specified service based on a timer or when the set time is elapsed.                                    |
+| Snapshot  | A unit that creates and saves the current state of all running units. This state can be used to restore the system later.                        |
+| Slice     | A group of units that manages system resources such as CPU, and memory.                                                                          |
+| Scope     | A unit that organizes and manages foreign processes                                                                                              |
+| busname   | A unit that controls DBus system                                                                                                                 |
 
 <!-- 1:8 -->
