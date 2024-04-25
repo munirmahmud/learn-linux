@@ -90,6 +90,8 @@ Target unit এর মধ্যে একাধিক unit কাজ করত�
 | Active (waliting)         | Successfully executed the one-time configuration and after execution, the unit is waiting for an event.                 |
 | Inactive (dead)           | Either the one-time configuration failed to execute or not executed yet.                                                |
 
+### Unit Type Details
+
 | Unit Type | Description                                                                                                                                      |
 | :-------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Target    | A group of units that defines a synchronization point. The synchronization point is used at boot time to start the system in a particular state. |
@@ -106,4 +108,14 @@ Target unit এর মধ্যে একাধিক unit কাজ করত�
 | Scope     | A unit that organizes and manages foreign processes                                                                                              |
 | busname   | A unit that controls DBus system                                                                                                                 |
 
-<!-- 1:8 -->
+`systemctl list-units` সিস্টেমে যতগুলো Unit List আছে তা দেখার জন্য।
+
+`systemctl list-units --type service` নির্দিষ্ট কোন Unit Type দেখার জন্য। এখানে আমি `service unit` দেখার জন্য কমান্ড দিয়েছি। এক্ষেত্রে শুধুমাত্র active service গুলো দেখাবে। এগুলোকে `low level unit` বলে। (running/exited/waiting) ইত্যাদি।
+
+`systemctl list-units --type service --all` সকল service গুলো দেখার জন্য। সকল মানে active/inactive সবগুলো।
+
+`systemctl list-units --type service --state active` active service গুলো দেখার জন্য। `--state` এর ভ্যালু হিসেবে `(active/inactive/running/loaded/exited/dead/not-found)` ব্যাবহার করতে পারি।
+
+`systemctl list-units --type service --state active` এই কমান্ড দেয়ার পরে যেই অউটপুট আসে তাতে কিছু ফাইলের নাম যার শেষে `.service` আছে। আমরা কোন সফটওয়্যার configure করলে সেটা সিস্টেমকে জানানোর জন্য কখনো ঐ সফটয়্যারকে চেঞ্জেসগুলো বুঝানোর জন্য `service reload or restart` দিয়ে থাকি। এগুলোই সেই ফাইল।
+
+<!-- ২০ -->
