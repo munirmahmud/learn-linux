@@ -123,3 +123,5 @@ OR
 `yum for Yellowdog Update Modifier`
 
 `dnf for Dandified YUM`
+
+`dnf` কমান্ড বিহান্ড দ্যা সিন `yum` ইউজ করে এবং এটা লেটেস্ট আর অনেক নতুন ফিচার অ্যাড করা হয়েছে। `dnf` কমান্ড `yum` এর চেয়ে অনেক ফাস্ট।
