@@ -340,5 +340,3 @@ nmcli connection modify ens160 ipv4.addresses 192.168.0.110/24 ipv4.gateway 192.
 ```bash
 nmcli connection add con-name private-net type ethernet ifname ens192 ipv4.addresses 192.168.0.110/24 ipv4.gateway 192.168.0.2 ipv4.dns 1.1.1.1,4.2.2.2,8.8.8.1 ipv4.method manual connection.autoconnect yes
 ```
-
-<!-- Done -->
