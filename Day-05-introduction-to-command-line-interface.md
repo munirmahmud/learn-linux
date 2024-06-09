@@ -1,4 +1,4 @@
-# Day 05 Introduction to Command Line Interface (CLI)
+# Day 05: Introduction to Command Line Interface (CLI)
 
 `~` এই সাইনকে টিলডা বলে। এই টিলডা সাইন দিয়ে লিনাক্সে `Home Directory` বুঝায়।
 
